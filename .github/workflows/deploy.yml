@@ -27,7 +27,7 @@ jobs:
         run: |
           scp -i ~/.ssh/oracle_deploy_key \
             index.html \
-            ${{ secrets.ORACLE_USER }}@${{ secrets.ORACLE_HOST }}:/var/www/html/index.html
+            ${{ secrets.ORACLE_USER }}@${{ secrets.ORACLE_HOST }}:/var/www/consultora.eduardosalasg.dev/index.html
 
       - name: Reload Nginx
         run: |
