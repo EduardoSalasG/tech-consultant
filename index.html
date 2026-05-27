@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="es-CL">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Partner tecnológico para pymes | ES Tech Partner</title>
+    <meta
+      name="description"
+      content="Consultora de desarrollo de sistemas para micro y pequeñas empresas en Chile. Webs, sistemas a medida, dashboards BI, automatización y dirección tecnológica externa."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Eduardo Salas González" />
+    <meta name="theme-color" content="#101411" />
+    <link rel="canonical" href="https://eduardosalasg.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:title" content="Partner tecnológico para pymes en Chile" />
+    <meta
+      property="og:description"
+      content="Ordena tu mundo digital: sistemas, datos, ecommerce, automatizaciones y marketing coordinado desde una dirección tecnológica externa."
+    />
+    <meta property="og:url" content="https://eduardosalasg.dev/" />
+    <meta property="og:site_name" content="ES Tech Partner" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://eduardosalasg.dev/#business",
+            "name": "ES Tech Partner",
+            "url": "https://eduardosalasg.dev/",
+            "email": "salas.eduardo03@gmail.com",
+            "telephone": "+56982439041",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Santiago",
+              "addressCountry": "CL"
+            },
+            "areaServed": "Chile",
+            "founder": {
+              "@type": "Person",
+              "name": "Eduardo Salas González",
+              "jobTitle": "Software Developer"
+            },
+            "serviceType": [
+              "Desarrollo de software",
+              "Sistemas a medida",
+              "Business Intelligence",
+              "Automatización de procesos",
+              "Dirección tecnológica externa",
+              "Sitios web profesionales"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://eduardosalasg.dev/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Para qué tipo de empresas trabaja la consultora?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "El foco está en micro y pequeñas empresas que ya venden, necesitan ordenar su operación digital y aún no tienen un equipo tecnológico interno."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Se puede contratar solo un proyecto puntual?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sí. Se desarrollan sitios web, portales, mini sistemas, dashboards y automatizaciones como proyectos cerrados o por hitos."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué incluye el acompañamiento mensual?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Incluye reuniones periódicas, mantención de activos digitales, priorización de mejoras, soporte acotado, desarrollo evolutivo y coordinación técnica según el plan contratado."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #111712;
+        --muted: #5f6b63;
+        --line: #dfe7e1;
+        --paper: #f8faf6;
+        --surface: #ffffff;
+        --soft: #edf4ef;
+        --accent: #0f8f68;
+        --accent-strong: #0a664b;
+        --lime: #c8ee50;
+        --amber: #f2b84b;
+        --radius: 8px;
+        --shadow: 0 24px 80px rgba(18, 28, 21, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        color: var(--ink);
+        background: var(--paper);
+        line-height: 1.5;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: 1rem;
+        top: -4rem;
+        z-index: 20;
+        padding: 0.75rem 1rem;
+        background: var(--ink);
+        color: white;
+        border-radius: var(--radius);
+      }
+
+      .skip-link:focus {
+        top: 1rem;
+      }
+
+      .shell {
+        width: min(1120px, calc(100% - 32px));
+        margin-inline: auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(223, 231, 225, 0.78);
+        background: rgba(248, 250, 246, 0.86);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .brand-mark {
+        width: 36px;
+        height: 36px;
+        display: grid;
+        place-items: center;
+        border-radius: var(--radius);
+        background: var(--ink);
+        color: var(--lime);
+        font-size: 0.82rem;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .nav-links a:hover {
+        color: var(--ink);
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        gap: 0.55rem;
+        border: 1px solid var(--ink);
+        border-radius: var(--radius);
+        padding: 0.78rem 1rem;
+        background: var(--ink);
+        color: white;
+        font-weight: 750;
+        line-height: 1;
+        transition:
+          transform 180ms ease,
+          background 180ms ease,
+          border-color 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+        background: var(--accent-strong);
+        border-color: var(--accent-strong);
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--ink);
+        border-color: var(--line);
+      }
+
+      .button.secondary:hover {
+        border-color: var(--accent);
+        background: var(--soft);
+      }
+
+      .hero {
+        min-height: calc(100svh - 72px);
+        display: grid;
+        align-items: center;
+        padding: 4rem 0 2.5rem;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.78fr);
+        gap: clamp(2rem, 5vw, 5rem);
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 0 0 1rem;
+        color: var(--accent-strong);
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--lime);
+        box-shadow: 0 0 0 5px rgba(200, 238, 80, 0.22);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 12ch;
+        margin-bottom: 1.1rem;
+        font-size: clamp(3rem, 8vw, 6.7rem);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .hero-copy {
+        max-width: 650px;
+        margin-bottom: 1.6rem;
+        color: #334039;
+        font-size: clamp(1.05rem, 2vw, 1.25rem);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-bottom: 2rem;
+      }
+
+      .proof-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.8rem;
+        max-width: 690px;
+      }
+
+      .proof-item {
+        border-top: 1px solid var(--line);
+        padding-top: 0.85rem;
+      }
+
+      .proof-item strong {
+        display: block;
+        font-size: 1.35rem;
+      }
+
+      .proof-item span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .system-board {
+        position: relative;
+        min-height: 560px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        background:
+          linear-gradient(90deg, rgba(17, 23, 18, 0.05) 1px, transparent 1px),
+          linear-gradient(rgba(17, 23, 18, 0.05) 1px, transparent 1px), #ffffff;
+        background-size: 32px 32px;
+        box-shadow: var(--shadow);
+      }
+
+      .board-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.86);
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        color: var(--accent-strong);
+        font-weight: 800;
+        font-size: 0.86rem;
+      }
+
+      .status::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--accent);
+      }
+
+      .board-tags {
+        display: flex;
+        gap: 0.4rem;
+      }
+
+      .board-tags span,
+      .mini-tag {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 0.28rem 0.55rem;
+        background: white;
+        color: var(--muted);
+        font-size: 0.76rem;
+        font-weight: 700;
+      }
+
+      .node {
+        position: absolute;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 16px 50px rgba(29, 40, 32, 0.1);
+      }
+
+      .node h2,
+      .node h3 {
+        margin: 0 0 0.3rem;
+        font-size: 1rem;
+      }
+
+      .node p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      .node.primary {
+        left: 8%;
+        top: 18%;
+        width: 58%;
+        min-height: 170px;
+        background: var(--ink);
+        color: white;
+      }
+
+      .node.primary p {
+        color: #cbd8ce;
+      }
+
+      .node.web {
+        right: 7%;
+        top: 32%;
+        width: 45%;
+      }
+
+      .node.data {
+        left: 10%;
+        bottom: 13%;
+        width: 42%;
+      }
+
+      .node.auto {
+        right: 9%;
+        bottom: 9%;
+        width: 38%;
+        border-color: rgba(15, 143, 104, 0.4);
+      }
+
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .metric {
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: var(--radius);
+        padding: 0.65rem;
+        background: rgba(255, 255, 255, 0.07);
+      }
+
+      .metric b {
+        display: block;
+        color: var(--lime);
+        font-size: 1.2rem;
+      }
+
+      .metric span {
+        color: #cbd8ce;
+        font-size: 0.72rem;
+      }
+
+      .flow-line {
+        position: absolute;
+        left: 19%;
+        top: 45%;
+        width: 64%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      }
+
+      section {
+        padding: 5rem 0;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .section-head h2 {
+        max-width: 720px;
+        margin-bottom: 0;
+        font-size: clamp(2rem, 4vw, 3.6rem);
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      .section-head p {
+        max-width: 360px;
+        margin-bottom: 0.2rem;
+        color: var(--muted);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        background: var(--surface);
+      }
+
+      .service {
+        min-height: 260px;
+        padding: 1.25rem;
+        border-right: 1px solid var(--line);
+      }
+
+      .service:last-child {
+        border-right: 0;
+      }
+
+      .service-icon {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 1.2rem;
+        border-radius: var(--radius);
+        background: var(--soft);
+        color: var(--accent-strong);
+      }
+
+      .service h3 {
+        margin-bottom: 0.7rem;
+        font-size: 1.18rem;
+      }
+
+      .service p {
+        color: var(--muted);
+      }
+
+      .packages {
+        background: var(--ink);
+        color: white;
+      }
+
+      .packages .section-head p,
+      .packages .eyebrow {
+        color: #b9c8bd;
+      }
+
+      .package-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .package {
+        display: flex;
+        min-height: 430px;
+        flex-direction: column;
+        padding: 1.25rem;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.055);
+      }
+
+      .package.featured {
+        background: white;
+        color: var(--ink);
+      }
+
+      .package.featured p,
+      .package.featured li {
+        color: #455249;
+      }
+
+      .package h3 {
+        margin-bottom: 0.65rem;
+        font-size: 1.5rem;
+      }
+
+      .package p,
+      .package li {
+        color: #b9c8bd;
+      }
+
+      .package ul {
+        display: grid;
+        gap: 0.75rem;
+        margin: 1rem 0 1.5rem;
+        padding: 0;
+        list-style: none;
+      }
+
+      .package li {
+        position: relative;
+        padding-left: 1.35rem;
+      }
+
+      .package li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.58rem;
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: var(--lime);
+      }
+
+      .package .button {
+        margin-top: auto;
+      }
+
+      .process-band {
+        border-block: 1px solid var(--line);
+        background: var(--surface);
+      }
+
+      .process {
+        display: grid;
+        grid-template-columns: 0.75fr 1.25fr;
+        gap: 3rem;
+        align-items: start;
+      }
+
+      .steps {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: 44px 1fr;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .step-number {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        border-radius: var(--radius);
+        background: var(--soft);
+        color: var(--accent-strong);
+        font-weight: 850;
+      }
+
+      .step h3 {
+        margin-bottom: 0.25rem;
+      }
+
+      .step p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .credentials {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .credential {
+        padding: 1.25rem;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+      }
+
+      .credential strong {
+        display: block;
+        margin-bottom: 0.4rem;
+        font-size: 1.1rem;
+      }
+
+      .credential span {
+        color: var(--muted);
+      }
+
+      .cta {
+        padding-bottom: 6rem;
+      }
+
+      .cta-box {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 2rem;
+        align-items: center;
+        border-radius: var(--radius);
+        padding: clamp(1.5rem, 5vw, 3rem);
+        background: var(--surface);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      .cta-box h2 {
+        margin-bottom: 0.8rem;
+        font-size: clamp(2rem, 4vw, 3.7rem);
+        line-height: 1.02;
+      }
+
+      .contact-panel {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .contact-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--paper);
+        font-weight: 750;
+      }
+
+      .contact-link span {
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .site-footer {
+        padding: 2rem 0;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hero {
+          min-height: auto;
+          padding-top: 3rem;
+        }
+
+        .hero-grid,
+        .process,
+        .cta-box {
+          grid-template-columns: 1fr;
+        }
+
+        .system-board {
+          min-height: 500px;
+        }
+
+        .services-grid,
+        .package-grid,
+        .credentials {
+          grid-template-columns: 1fr;
+        }
+
+        .service {
+          min-height: auto;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .service:last-child {
+          border-bottom: 0;
+        }
+
+        .section-head {
+          display: block;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .shell {
+          width: min(100% - 24px, 1120px);
+        }
+
+        .nav {
+          min-height: 64px;
+        }
+
+        .brand span:last-child {
+          max-width: 145px;
+          line-height: 1.05;
+        }
+
+        .hero-actions,
+        .proof-row {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-actions .button {
+          width: 100%;
+        }
+
+        .proof-row {
+          display: grid;
+        }
+
+        .system-board {
+          min-height: 610px;
+        }
+
+        .node.primary,
+        .node.web,
+        .node.data,
+        .node.auto {
+          left: 1rem;
+          right: 1rem;
+          width: auto;
+        }
+
+        .node.primary {
+          top: 5.3rem;
+        }
+
+        .node.web {
+          top: 17.8rem;
+        }
+
+        .node.data {
+          bottom: 9.5rem;
+        }
+
+        .node.auto {
+          bottom: 1rem;
+        }
+
+        .flow-line {
+          display: none;
+        }
+
+        .metric-grid {
+          grid-template-columns: 1fr;
+        }
+
+        section {
+          padding: 3.5rem 0;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Navegación principal">
+        <a class="brand" href="#inicio" aria-label="ES Tech Partner inicio">
+          <span class="brand-mark">ES</span>
+          <span>ES Tech Partner</span>
+        </a>
+        <div class="nav-links" aria-label="Secciones">
+          <a href="#servicios">Servicios</a>
+          <a href="#planes">Planes</a>
+          <a href="#metodo">Método</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <a class="button" href="mailto:salas.eduardo03@gmail.com?subject=Quiero%20ordenar%20mi%20mundo%20digital">
+          Agendar diagnóstico
+        </a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-grid shell">
+          <div>
+            <p class="eyebrow">Consultora de desarrollo de sistemas</p>
+            <h1 id="hero-title">Tu partner tecnológico externo.</h1>
+            <p class="hero-copy">
+              Ordeno tu mundo digital, sistemas, datos y procesos para que tu empresa deje de
+              depender de parches, Excel eterno y decisiones sin visibilidad.
+            </p>
+            <div class="hero-actions" aria-label="Acciones principales">
+              <a
+                class="button"
+                href="https://wa.me/56982439041?text=Hola%20Eduardo%2C%20quiero%20evaluar%20un%20proyecto%20tecnol%C3%B3gico%20para%20mi%20empresa."
+              >
+                Hablar por WhatsApp
+              </a>
+              <a class="button secondary" href="#planes">Ver planes</a>
+            </div>
+            <div class="proof-row" aria-label="Credenciales resumidas">
+              <div class="proof-item">
+                <strong>Full stack</strong>
+                <span>Angular, Node.js, NestJS, .NET y bases de datos.</span>
+              </div>
+              <div class="proof-item">
+                <strong>BI + datos</strong>
+                <span>Dashboards, KPIs, Power BI, Looker Studio y Tableau.</span>
+              </div>
+              <div class="proof-item">
+                <strong>Santiago</strong>
+                <span>Trabajo remoto para empresas en Chile.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="system-board" aria-label="Mapa visual de una operación digital integrada">
+            <div class="board-top">
+              <span class="status">Operación integrada</span>
+              <div class="board-tags" aria-hidden="true">
+                <span>Web</span>
+                <span>BI</span>
+                <span>Ops</span>
+              </div>
+            </div>
+            <div class="flow-line" aria-hidden="true"></div>
+            <article class="node primary">
+              <span class="mini-tag">Roadmap trimestral</span>
+              <h2>Dirección tecnológica externa</h2>
+              <p>
+                Priorización, arquitectura simple, coordinación de proveedores y seguimiento de
+                avances en lenguaje de negocio.
+              </p>
+              <div class="metric-grid" aria-hidden="true">
+                <div class="metric">
+                  <b>P0</b>
+                  <span>Incidentes críticos</span>
+                </div>
+                <div class="metric">
+                  <b>KPI</b>
+                  <span>Datos al día</span>
+                </div>
+                <div class="metric">
+                  <b>SLA</b>
+                  <span>Respuesta clara</span>
+                </div>
+              </div>
+            </article>
+            <article class="node web">
+              <h3>Web y sistemas</h3>
+              <p>Sitios profesionales, portales, login, APIs e integraciones.</p>
+            </article>
+            <article class="node data">
+              <h3>Control de gestión</h3>
+              <p>Radiografía del negocio, dashboard y KPIs accionables.</p>
+            </article>
+            <article class="node auto">
+              <h3>Automatización</h3>
+              <p>Flujos que eliminan tareas repetitivas y errores manuales.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicios" aria-labelledby="services-title">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Servicios</p>
+              <h2 id="services-title">Tecnología práctica para empresas que ya están operando.</h2>
+            </div>
+            <p>
+              El foco está en micro y pequeñas empresas que necesitan crecer sin contratar un equipo
+              tech interno desde el primer día.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service">
+              <div class="service-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 5h16v11H4zM8 20h8" stroke="currentColor" stroke-width="2" />
+                  <path d="M10 16v4m4-4v4" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+              <h3>Webs y sistemas a medida</h3>
+              <p>
+                Sitios que explican y venden, portales para clientes o equipos, mini sistemas y
+                funcionalidades conectadas a tu operación.
+              </p>
+            </article>
+            <article class="service">
+              <div class="service-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 19V5m0 14h15" stroke="currentColor" stroke-width="2" />
+                  <path d="M9 15v-4m4 4V8m4 7v-6" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+              <h3>Data & BI</h3>
+              <p>
+                Definición de indicadores, fuentes de datos, dashboards y reportes que muestran lo
+                que realmente mueve ventas, operación y clientes.
+              </p>
+            </article>
+            <article class="service">
+              <div class="service-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 7h5l3 10h6" stroke="currentColor" stroke-width="2" />
+                  <path d="M17 5l3 3-3 3M7 17l-3-3 3-3" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+              <h3>Automatización de procesos</h3>
+              <p>
+                Correos, planillas, formularios, traspasos de datos y tareas repetitivas convertidas
+                en flujos medibles y mantenibles.
+              </p>
+            </article>
+            <article class="service">
+              <div class="service-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3l8 4v6c0 4-3 7-8 8-5-1-8-4-8-8V7z" stroke="currentColor" stroke-width="2" />
+                  <path d="M9 12l2 2 4-5" stroke="currentColor" stroke-width="2" />
+                </svg>
+              </div>
+              <h3>Partner tech mensual</h3>
+              <p>
+                Mantención, roadmap, priorización, soporte, coordinación con marketing y decisiones
+                técnicas aterrizadas al negocio.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="packages" id="planes" aria-labelledby="plans-title">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Planes en vitrina</p>
+              <h2 id="plans-title">Tres formas claras de empezar sin sobredimensionar.</h2>
+            </div>
+            <p>
+              Cada plan se ajusta según horas, complejidad y urgencia. Los proyectos grandes se
+              cotizan por separado.
+            </p>
+          </div>
+
+          <div class="package-grid">
+            <article class="package">
+              <span class="mini-tag">Desde 3er micro</span>
+              <h3>Presencia y Orden Digital</h3>
+              <p>Para empresas que necesitan una base digital profesional y mantenida.</p>
+              <ul>
+                <li>Web profesional o renovación responsive.</li>
+                <li>Hosting, SSL, backups y mantención.</li>
+                <li>Acompañamiento tecnológico básico.</li>
+                <li>Una automatización simple inicial.</li>
+              </ul>
+              <a class="button secondary" href="mailto:salas.eduardo03@gmail.com?subject=Plan%20Presencia%20y%20Orden%20Digital">
+                Consultar plan
+              </a>
+            </article>
+
+            <article class="package featured">
+              <span class="mini-tag">Recomendado</span>
+              <h3>Negocio Organizado y Medible</h3>
+              <p>Para empresas que ya operan, pero necesitan control, prioridades y datos.</p>
+              <ul>
+                <li>Socio tecnológico para crecer.</li>
+                <li>Una o dos automatizaciones de procesos.</li>
+                <li>Radiografía del negocio y tablero de indicadores.</li>
+                <li>Ajustes web o sistemas para integrar la operación.</li>
+              </ul>
+              <a class="button" href="mailto:salas.eduardo03@gmail.com?subject=Plan%20Negocio%20Organizado%20y%20Medible">
+                Evaluar mi caso
+              </a>
+            </article>
+
+            <article class="package">
+              <span class="mini-tag">Escala estratégica</span>
+              <h3>Partner Tech Estratégico</h3>
+              <p>Para dirección, crecimiento y supervisión tecnológica continua.</p>
+              <ul>
+                <li>Dirección tecnológica externa.</li>
+                <li>Roadmap trimestral y reuniones regulares.</li>
+                <li>Supervisión de proveedores y proyectos.</li>
+                <li>Coordinación de desarrollo, BI, automatización y marketing.</li>
+              </ul>
+              <a class="button secondary" href="mailto:salas.eduardo03@gmail.com?subject=Plan%20Partner%20Tech%20Estrat%C3%A9gico">
+                Conversar alcance
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="process-band" id="metodo" aria-labelledby="method-title">
+        <div class="process shell">
+          <div>
+            <p class="eyebrow">Método</p>
+            <h2 id="method-title">Primero claridad, luego desarrollo.</h2>
+            <p>
+              Una buena solución no empieza con tecnología. Empieza entendiendo dónde se pierde
+              tiempo, dinero o control.
+            </p>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <div class="step-number">01</div>
+              <div>
+                <h3>Diagnóstico operativo</h3>
+                <p>Se identifican activos digitales, procesos críticos, fuentes de datos y dolores reales.</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step-number">02</div>
+              <div>
+                <h3>Roadmap priorizado</h3>
+                <p>Se separa lo urgente de lo importante y se define qué conviene hacer primero.</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step-number">03</div>
+              <div>
+                <h3>Implementación medible</h3>
+                <p>Se desarrolla, prueba y entrega con foco en adopción, soporte y mejora continua.</p>
+              </div>
+            </article>
+            <article class="step">
+              <div class="step-number">04</div>
+              <div>
+                <h3>Seguimiento mensual</h3>
+                <p>Se revisan avances, incidentes, horas consumidas y próximos pasos por impacto.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="credentials-title">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Respaldo</p>
+              <h2 id="credentials-title">Perfil técnico con mirada de negocio.</h2>
+            </div>
+            <p>
+              Experiencia en desarrollo, ecommerce, ETL, dashboards y coordinación de equipos
+              comerciales y técnicos.
+            </p>
+          </div>
+          <div class="credentials">
+            <div class="credential">
+              <strong>Desarrollo full stack</strong>
+              <span>Angular, microfrontends, Node.js, NestJS, .NET Core, C#, JavaScript y TypeScript.</span>
+            </div>
+            <div class="credential">
+              <strong>Datos y operación</strong>
+              <span>PostgreSQL, DynamoDB, MariaDB, Talend, Looker Studio, Power BI y Tableau.</span>
+            </div>
+            <div class="credential">
+              <strong>Ecommerce y marketing coordinado</strong>
+              <span>Gestión de plataforma ecommerce, dashboards de procesos y ejecución comercial con equipos externos.</span>
+            </div>
+            <div class="credential">
+              <strong>Formación</strong>
+              <span>Ingeniería en Computación e Informática, Análisis de Sistemas y bootcamp full stack.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="contacto" aria-labelledby="contact-title">
+        <div class="cta-box shell">
+          <div>
+            <p class="eyebrow">Contacto</p>
+            <h2 id="contact-title">Hablemos de lo que hoy frena tu operación.</h2>
+            <p>
+              En una primera conversación se revisa el estado actual, prioridades, riesgos y el
+              camino más simple para ordenar tu tecnología.
+            </p>
+          </div>
+          <div class="contact-panel" aria-label="Canales de contacto">
+            <a
+              class="contact-link"
+              href="mailto:salas.eduardo03@gmail.com?subject=Diagn%C3%B3stico%20tecnol%C3%B3gico"
+            >
+              Email <span>salas.eduardo03@gmail.com</span>
+            </a>
+            <a
+              class="contact-link"
+              href="https://wa.me/56982439041?text=Hola%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20tecnol%C3%B3gico."
+            >
+              WhatsApp <span>+56 9 8243 9041</span>
+            </a>
+            <a class="contact-link" href="#inicio">Ubicación <span>Santiago, Chile</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner shell">
+        <span>© 2026 ES Tech Partner. Desarrollo de sistemas, datos y automatización.</span>
+        <span>Responsive, accesible y optimizado para SEO técnico.</span>
+      </div>
+    </footer>
+  </body>
+</html>
