@@ -1,0 +1,36 @@
+name: Deploy static HTML to Oracle VM
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate index.html exists
+        run: test -f index.html
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.ORACLE_SSH_KEY }}" > ~/.ssh/oracle_deploy_key
+          chmod 600 ~/.ssh/oracle_deploy_key
+          ssh-keyscan -H "${{ secrets.ORACLE_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Deploy index.html
+        run: |
+          scp -i ~/.ssh/oracle_deploy_key \
+            index.html \
+            ${{ secrets.ORACLE_USER }}@${{ secrets.ORACLE_HOST }}:/var/www/html/index.html
+
+      - name: Reload Nginx
+        run: |
+          ssh -i ~/.ssh/oracle_deploy_key \
+            ${{ secrets.ORACLE_USER }}@${{ secrets.ORACLE_HOST }} \
+            "sudo systemctl reload nginx"
