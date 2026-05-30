@@ -16,6 +16,18 @@
     href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Crect width="64" height="64" rx="10" fill="%23ffffff"/%3E%3Ctext x="50%25" y="52%25" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700" fill="%230b2e59"%3EES%3C/text%3E%3C/svg%3E'
   />
   <link rel="canonical" href="https://eduardosalasg.dev/" />
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l !== "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-PS6J3MK9");
+  </script>
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_CL" />
@@ -832,6 +844,8 @@
 </head>
 
 <body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS6J3MK9" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <header class="site-header">
@@ -1179,6 +1193,80 @@
       <span>© 2026 ES Tech Services. Desarrollo, Cloud, Data & BI, AI y Business Process Optimization.</span>
     </div>
   </footer>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function trackEvent(payload) {
+      window.dataLayer.push(payload);
+    }
+
+    trackEvent({
+      event: "page_metadata",
+      page_type: "consultora",
+      page_title: document.title,
+      page_path: location.pathname
+    });
+
+    document.addEventListener("click", function (e) {
+      var link = e.target.closest("a[href]");
+      var button = e.target.closest("button");
+      var target = link || button;
+      if (!target) return;
+
+      var label = (target.textContent || "").trim().replace(/\s+/g, " ").slice(0, 120);
+      var href = link ? link.getAttribute("href") || "" : "";
+      var section = target.closest("section");
+      var sectionId = section && section.id ? section.id : "none";
+
+      trackEvent({
+        event: "ui_click",
+        click_text: label || "no_text",
+        click_href: href || "no_href",
+        click_type: link ? "link" : "button",
+        section_id: sectionId
+      });
+
+      if (href.indexOf("wa.me") !== -1) {
+        trackEvent({ event: "contact_whatsapp_click", click_text: label || "whatsapp" });
+      } else if (href.indexOf("mailto:") === 0) {
+        trackEvent({ event: "contact_email_click", click_text: label || "email" });
+      } else if (href.indexOf("#") === 0) {
+        trackEvent({ event: "in_page_navigation_click", target_id: href.slice(1) || "root" });
+      }
+    });
+
+    var seenSections = {};
+    var sections = document.querySelectorAll("section[id]");
+    if ("IntersectionObserver" in window && sections.length) {
+      var sectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var id = entry.target.id;
+          if (seenSections[id]) return;
+          seenSections[id] = true;
+          trackEvent({ event: "section_view", section_id: id });
+        });
+      }, { threshold: 0.35 });
+      sections.forEach(function (section) { sectionObserver.observe(section); });
+    }
+
+    var maxScrollBucket = 0;
+    var scrollBuckets = [25, 50, 75, 100];
+    window.addEventListener("scroll", function () {
+      var doc = document.documentElement;
+      var scrollTop = doc.scrollTop || document.body.scrollTop;
+      var trackHeight = doc.scrollHeight - doc.clientHeight;
+      if (trackHeight <= 0) return;
+      var percent = Math.round((scrollTop / trackHeight) * 100);
+      for (var i = 0; i < scrollBuckets.length; i++) {
+        var bucket = scrollBuckets[i];
+        if (percent >= bucket && bucket > maxScrollBucket) {
+          maxScrollBucket = bucket;
+          trackEvent({ event: "scroll_depth", scroll_percent: bucket });
+        }
+      }
+    }, { passive: true });
+  </script>
 </body>
 
 </html>
