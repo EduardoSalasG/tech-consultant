@@ -343,7 +343,6 @@
     }
 
     .system-board {
-      position: relative;
       min-height: 560px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -353,6 +352,13 @@
         linear-gradient(rgba(16, 35, 63, 0.06) 1px, transparent 1px), #ffffff;
       background-size: 32px 32px;
       box-shadow: var(--shadow);
+    }
+
+    .board-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      padding: 1rem;
     }
 
     .board-top {
@@ -398,7 +404,6 @@
     }
 
     .node {
-      position: absolute;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 1rem;
@@ -419,9 +424,7 @@
     }
 
     .node.primary {
-      left: 8%;
-      top: 18%;
-      width: 58%;
+      grid-column: 1 / -1;
       min-height: 170px;
       background: var(--ink);
       color: white;
@@ -431,22 +434,7 @@
       color: #cbd8ce;
     }
 
-    .node.web {
-      right: 7%;
-      top: 32%;
-      width: 45%;
-    }
-
-    .node.data {
-      left: 10%;
-      bottom: 13%;
-      width: 42%;
-    }
-
     .node.auto {
-      right: 9%;
-      bottom: 9%;
-      width: 38%;
       border-color: rgba(23, 79, 138, 0.45);
     }
 
@@ -476,12 +464,7 @@
     }
 
     .flow-line {
-      position: absolute;
-      left: 19%;
-      top: 45%;
-      width: 64%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      display: none;
     }
 
     section {
@@ -821,36 +804,10 @@
       }
 
       .system-board {
-        min-height: 610px;
+        min-height: auto;
       }
-
-      .node.primary,
-      .node.web,
-      .node.data,
-      .node.auto {
-        left: 1rem;
-        right: 1rem;
-        width: auto;
-      }
-
-      .node.primary {
-        top: 5.3rem;
-      }
-
-      .node.web {
-        top: 17.8rem;
-      }
-
-      .node.data {
-        bottom: 9.5rem;
-      }
-
-      .node.auto {
-        bottom: 1rem;
-      }
-
-      .flow-line {
-        display: none;
+      .board-grid {
+        grid-template-columns: 1fr;
       }
 
       .metric-grid {
@@ -938,40 +895,42 @@
             </div>
           </div>
           <div class="flow-line" aria-hidden="true"></div>
-          <article class="node primary">
-            <span class="mini-tag">Roadmap trimestral</span>
-            <h2>Dirección tecnológica externa</h2>
-            <p>
-              Priorización, arquitectura simple, coordinación de proveedores y seguimiento de
-              avances en lenguaje de negocio.
-            </p>
-            <div class="metric-grid" aria-hidden="true">
-              <div class="metric">
-                <b>P0</b>
-                <span>Incidentes críticos</span>
+          <div class="board-grid">
+            <article class="node primary">
+              <span class="mini-tag">Roadmap trimestral</span>
+              <h2>Dirección tecnológica externa</h2>
+              <p>
+                Priorización, arquitectura simple, coordinación de proveedores y seguimiento de
+                avances en lenguaje de negocio.
+              </p>
+              <div class="metric-grid" aria-hidden="true">
+                <div class="metric">
+                  <b>P0</b>
+                  <span>Incidentes críticos</span>
+                </div>
+                <div class="metric">
+                  <b>KPI</b>
+                  <span>Datos al día</span>
+                </div>
+                <div class="metric">
+                  <b>SLA</b>
+                  <span>Respuesta clara</span>
+                </div>
               </div>
-              <div class="metric">
-                <b>KPI</b>
-                <span>Datos al día</span>
-              </div>
-              <div class="metric">
-                <b>SLA</b>
-                <span>Respuesta clara</span>
-              </div>
-            </div>
-          </article>
-          <article class="node web">
-            <h3>Web y sistemas</h3>
-            <p>Sitios profesionales, portales, login, APIs e integraciones.</p>
-          </article>
-          <article class="node data">
-            <h3>Control de gestión</h3>
-            <p>Radiografía del negocio, dashboard y KPIs accionables.</p>
-          </article>
-          <article class="node auto">
-            <h3>Automatización</h3>
-            <p>Flujos que eliminan tareas repetitivas y errores manuales.</p>
-          </article>
+            </article>
+            <article class="node web">
+              <h3>Web y sistemas</h3>
+              <p>Sitios profesionales, portales, login, APIs e integraciones.</p>
+            </article>
+            <article class="node data">
+              <h3>Control de gestión</h3>
+              <p>Radiografía del negocio, dashboard y KPIs accionables.</p>
+            </article>
+            <article class="node auto">
+              <h3>Automatización</h3>
+              <p>Flujos que eliminan tareas repetitivas y errores manuales.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
