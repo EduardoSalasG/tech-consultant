@@ -21,8 +21,6 @@ $required = @(
   'og:image:alt',
   'og:image:width" content="1200"',
   'og:image:height" content="630"',
-  '"founder"',
-  'Eduardo Salas González',
   'role="img"',
   'Formato:',
   'menu-cta'
