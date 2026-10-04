@@ -29,6 +29,12 @@ jobs:
             index.html \
             ${{ secrets.ORACLE_USER }}@${{ secrets.ORACLE_HOST }}:/var/www/consultora.eduardosalasg.dev/index.html
 
+      - name: Deploy static assets
+        run: |
+          scp -i ~/.ssh/oracle_deploy_key -r \
+            assets robots.txt sitemap.xml \
+            ${{ secrets.ORACLE_USER }}@${{ secrets.ORACLE_HOST }}:/var/www/consultora.eduardosalasg.dev/
+
       - name: Reload Nginx
         run: |
           ssh -i ~/.ssh/oracle_deploy_key \
