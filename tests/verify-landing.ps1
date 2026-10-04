@@ -15,7 +15,7 @@ $required = @(
   'scroll-margin-top:',
   'prefers-reduced-motion: reduce',
   'prefers-reduced-transparency: reduce',
-  'https://eduardosalasg.dev/assets/og-es-tech-services.png',
+  'https://consultora.eduardosalasg.dev/assets/og-es-tech-services.png',
   'FAQPage',
   'contact_whatsapp_click',
   'og:image:alt',
